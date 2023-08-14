@@ -1,25 +1,18 @@
 @use "vars";
 
 .list_item {
-  &_column {
-    flex-direction: column;
-    align-items: start;
-  }
-
   &_personal_info,
   &_actions {
     padding: 2em 1em;
   }
 
   &_actions {
-    width: 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 
     .links {
       .link_action {
-        cursor: pointer;
         padding: 0 0.3em;
       }
     }

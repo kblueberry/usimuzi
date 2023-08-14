@@ -3,6 +3,7 @@ import { CONSTANTS } from "../constants/Constants";
 import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { UserPosts } from "../context/UserPostsProvider";
+import BackButton from "./BackButton";
 
 export default function Posts() {
   const { id } = useParams();
@@ -14,6 +15,7 @@ export default function Posts() {
 
   return (
     <>
+      <BackButton />
       <ItemsList title={CONSTANTS.titles.posts} state={state} />
     </>
   );
