@@ -1,12 +1,6 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
-import { User } from "../dto/User";
 import { getUsers } from "../constants/Api";
-
-interface UsersState {
-  data: Array<User>;
-  loading: boolean;
-  error: Error | null;
-}
+import { UsersState } from "../dto/UsersState";
 
 const initialUsersState = {
   data: [],
@@ -14,7 +8,7 @@ const initialUsersState = {
   error: null,
 };
 
-const UsersContext = createContext<UsersState>(initialUsersState);
+export const UsersContext = createContext<UsersState>(initialUsersState);
 
 export default function UsersProvider({ children }: { children: ReactNode }) {
   const [usersFetchState, setUsersFetchState] =

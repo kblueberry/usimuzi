@@ -1,20 +1,29 @@
-import { useEffect, useState } from "react";
-import { Divider, List, ListItem } from "@mui/material";
+import { useContext } from "react";
+import { Alert, Divider, List, ListItem } from "@mui/material";
 import UserProfile from "./UserProfile";
-import { getUsers } from "../constants/Api";
 import { User } from "../dto/User";
+import { UsersContext } from "../context/UsersProvider";
+import LoadingIndicator from "./LoadingIndicator";
 
 export default function UsersList() {
-  const [users, setUsers] = useState<Array<User>>([]);
+  const usersState = useContext(UsersContext);
 
-  useEffect(() => {
-    getUsers().then((result) => setUsers(result.data));
-  });
+  if (usersState.loading) {
+    return <LoadingIndicator />;
+  }
+
+  if (!!usersState.error) {
+    return (
+      <Alert severity="error">
+        An error occurred when fetching users: {usersState.error.message}
+      </Alert>
+    );
+  }
 
   return (
     <div className="flex_column_container">
       <List>
-        {users.map((user: User) => (
+        {usersState.data.map((user: User) => (
           <div key={user.id}>
             <ListItem>
               <UserProfile userInfo={user} />
