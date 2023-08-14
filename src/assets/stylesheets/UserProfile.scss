@@ -1,0 +1,37 @@
+@use "vars";
+
+.list_item {
+  padding: 2em 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+
+  &_personal_info,
+  &_actions {
+    padding: 2em 1em;
+  }
+
+  &_actions {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .links {
+      .link_action {
+        cursor: pointer;
+        color: vars.$link_color;
+        padding: 0 0.3em;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &_title {
+    font-size: vars.$font_size_large;
+  }
+
+  &_subtitle {
+    font-size: vars.$font_size_small;
+  }
+}
