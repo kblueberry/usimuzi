@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import Main from "./Main";
+import Main from "./components/Main";
 import React from "react";
 
 const root = createRoot(
