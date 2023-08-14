@@ -1,5 +1,5 @@
 import "../assets/stylesheets/UserProfile.scss";
-import UserProfileGoToAction from "./UserProfileGoToAction";
+import SelectCollectionAction from "./SelectCollectionAction";
 import { User } from "../dto/User";
 
 export default function UserProfile({ userInfo }: { userInfo: User }) {
@@ -9,7 +9,7 @@ export default function UserProfile({ userInfo }: { userInfo: User }) {
         username={userInfo.username}
         name={userInfo.name}
       />
-      <UserProfileGoToAction />
+      <SelectCollectionAction id={userInfo.id} />
     </div>
   );
 }

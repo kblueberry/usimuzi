@@ -8,4 +8,9 @@ export const CONSTANTS = {
     albums: "Albums",
   },
   profileActions: ["Posts", "Albums"],
+  initialFetchState: {
+    data: [],
+    loading: false,
+    error: null,
+  },
 };
