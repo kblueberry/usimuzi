@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Divider, List, ListItem } from "@mui/material";
+import { Divider, List, ListItem, ListSubheader } from "@mui/material";
 import UserProfile from "./UserProfile";
 import { User } from "../dto/User";
 import { UsersContext } from "../context/UsersProvider";
@@ -19,6 +19,9 @@ export default function UsersList() {
 
   return (
     <div className="flex_column_container">
+      <ListSubheader>
+        <h1 className="heading_h1">Users</h1>
+      </ListSubheader>
       <List>
         {usersState.data.map((user: User) => (
           <div key={user.id}>
