@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "@mui/material";
 
 const selectOptions = ["Posts", "Albums"];
 
@@ -9,9 +9,9 @@ export default function UserProfileGoToAction() {
 
       <div className="links">
         {selectOptions.map((option, index) => (
-          <a key={index} className="link_action">
+          <Link key={index} className="link_action">
             {option}
-          </a>
+          </Link>
         ))}
       </div>
     </div>

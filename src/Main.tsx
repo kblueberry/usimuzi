@@ -1,7 +1,11 @@
 import React from "react";
 import UsersList from "./components/UsersList";
+import UsersProvider from "./context/UsersProvider";
 
 export default function Main() {
-  <h1>Hi there</h1>;
-  return <UsersList />;
+  return (
+    <UsersProvider>
+      <UsersList />
+    </UsersProvider>
+  );
 }

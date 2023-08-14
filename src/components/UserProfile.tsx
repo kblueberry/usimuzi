@@ -1,22 +1,31 @@
-import React from "react";
 import "../assets/stylesheets/UserProfile.scss";
 import UserProfileGoToAction from "./UserProfileGoToAction";
+import { User } from "../dto/User";
 
-export default function UserProfile() {
+export default function UserProfile({ userInfo }: { userInfo: User }) {
   return (
     <div className="list_item">
-      <UserPersonalInformation />
+      <UserPersonalInformation
+        username={userInfo.username}
+        name={userInfo.name}
+      />
       <UserProfileGoToAction />
     </div>
   );
 }
 
-function UserPersonalInformation() {
+function UserPersonalInformation({
+  username,
+  name,
+}: {
+  username: string;
+  name: string;
+}) {
   return (
     <div className="list_item_personal_info">
-      <b className="list_item_title">Amanda Prisley</b>
+      <b className="list_item_title">{name}</b>
       <p className="list_item_subtitle">
-        <i>@username</i>
+        <i>{`@${username}`}</i>
       </p>
     </div>
   );
