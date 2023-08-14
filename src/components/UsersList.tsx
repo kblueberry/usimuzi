@@ -15,12 +15,12 @@ export default function UsersList() {
     <div className="flex_column_container">
       <List>
         {users.map((user: User) => (
-          <>
-            <ListItem key={user.id}>
+          <div key={user.id}>
+            <ListItem>
               <UserProfile userInfo={user} />
             </ListItem>
             <Divider />
-          </>
+          </div>
         ))}
       </List>
     </div>
