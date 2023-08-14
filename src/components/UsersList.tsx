@@ -1,9 +1,10 @@
 import { useContext } from "react";
-import { Alert, Divider, List, ListItem } from "@mui/material";
+import { Divider, List, ListItem } from "@mui/material";
 import UserProfile from "./UserProfile";
 import { User } from "../dto/User";
 import { UsersContext } from "../context/UsersProvider";
 import LoadingIndicator from "./LoadingIndicator";
+import ErrorSnackBar from "./ErrorSnackBar";
 
 export default function UsersList() {
   const usersState = useContext(UsersContext);
@@ -13,11 +14,7 @@ export default function UsersList() {
   }
 
   if (!!usersState.error) {
-    return (
-      <Alert severity="error">
-        An error occurred when fetching users: {usersState.error.message}
-      </Alert>
-    );
+    return <ErrorSnackBar error={usersState.error} />;
   }
 
   return (
