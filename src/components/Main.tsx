@@ -1,7 +1,9 @@
 import React from "react";
-import UsersList from "./UsersList";
 import UsersProvider from "../context/UsersProvider";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import UsersList from "./UsersList";
+import Posts from "./Posts";
+import UserPostsProvider from "../context/UserPostsProvider";
 
 export default function Main() {
   return (
@@ -13,6 +15,14 @@ export default function Main() {
             <UsersProvider>
               <UsersList />
             </UsersProvider>
+          }
+        ></Route>
+        <Route
+          path="users/:id/posts"
+          element={
+            <UserPostsProvider>
+              <Posts />
+            </UserPostsProvider>
           }
         ></Route>
       </Routes>

@@ -32,3 +32,24 @@ body {
   font-weight: bold;
   color: vars.$black;
 }
+
+.list_item {
+  padding: 2em 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+
+  &_column {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &_title {
+    font-size: vars.$font_size_large;
+    font-weight: bold;
+  }
+
+  &_subtitle {
+    font-size: vars.$font_size_small;
+  }
+}
