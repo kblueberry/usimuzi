@@ -5,6 +5,7 @@ import { User } from "../dto/User";
 import { UsersContext } from "../context/UsersProvider";
 import LoadingIndicator from "./LoadingIndicator";
 import ErrorSnackBar from "./ErrorSnackBar";
+import { CONSTANTS } from "../constants/Labels";
 
 export default function UsersList() {
   const usersState = useContext(UsersContext);
@@ -20,7 +21,7 @@ export default function UsersList() {
   return (
     <div className="flex_column_container">
       <ListSubheader>
-        <h1 className="heading_h1">Users</h1>
+        <h1 className="heading_h1">{CONSTANTS.titles.users}</h1>
       </ListSubheader>
       <List>
         {usersState.data.map((user: User) => (
