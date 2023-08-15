@@ -6,9 +6,9 @@ export const CONSTANTS = {
   titles: {
     users: "Users",
     posts: "Posts",
-    albums: "albums",
+    albums: "Albums",
   },
-  profileActions: ["Posts", "albums"],
+  profileActions: ["Posts", "Albums"],
   initialFetchState: {
     data: [],
     loading: false,
