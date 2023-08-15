@@ -1,6 +1,6 @@
-import "../assets/stylesheets/UserProfile.scss";
+import "../../assets/stylesheets/UserProfile.scss";
 import SelectCollectionAction from "./SelectCollectionAction";
-import { User } from "../dto/User";
+import { User } from "../../dto/User";
 
 export default function UserProfile({ userInfo }: { userInfo: User }) {
   return (

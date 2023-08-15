@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import { CONSTANTS } from "../constants/Constants";
+import { CONSTANTS } from "../../constants/Constants";
 import { useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 

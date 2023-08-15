@@ -49,11 +49,3 @@ body {
     font-size: vars.$font_size_small;
   }
 }
-
-.album_item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid vars.$black;
-  border-radius: 15px;
-}

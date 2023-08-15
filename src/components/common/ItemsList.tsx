@@ -1,11 +1,11 @@
 import { Divider, List, ListItem, ListSubheader } from "@mui/material";
-import UserProfile from "./UserProfile";
-import { User } from "../dto/User";
+import UserProfile from "../users/UserProfile";
+import { User } from "../../dto/User";
 import LoadingIndicator from "./LoadingIndicator";
 import ErrorSnackBar from "./ErrorSnackBar";
-import { Post } from "../dto/Post";
-import UserPost from "./Post";
-import { ListProps } from "../dto/ListProps";
+import { Post } from "../../dto/Post";
+import UserPost from "../posts/Post";
+import { ListProps } from "../../dto/ListProps";
 
 export default function ItemsList({ title, state }: ListProps<User | Post>) {
   if (state.loading) {

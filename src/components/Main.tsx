@@ -1,11 +1,11 @@
 import React from "react";
 import UsersProvider from "../context/UsersProvider";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import UsersList from "./UsersList";
-import Posts from "./Posts";
+import UsersList from "./users/UsersList";
+import Posts from "./posts/Posts";
 import UserPostsProvider from "../context/UserPostsProvider";
 import UserAlbumsProvider from "../context/UserAlbumsProvider";
-import Albums from "./Albums";
+import Albums from "./albums/Albums";
 import "../assets/stylesheets/app.scss";
 
 export default function Main() {

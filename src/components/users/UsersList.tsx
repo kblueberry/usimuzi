@@ -1,7 +1,7 @@
-import ItemsList from "./ItemsList";
-import { CONSTANTS } from "../constants/Constants";
+import ItemsList from "../common/ItemsList";
+import { CONSTANTS } from "../../constants/Constants";
 import { useContext } from "react";
-import { UsersContext } from "../context/UsersProvider";
+import { UsersContext } from "../../context/UsersProvider";
 
 export default function UsersList() {
   const usersState = useContext(UsersContext);

@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useContext, useEffect } from "react";
-import BackButton from "./BackButton";
-import { CONSTANTS } from "../constants/Constants";
-import { UserAlbums } from "../context/UserAlbumsProvider";
+import BackButton from "../common/BackButton";
+import { CONSTANTS } from "../../constants/Constants";
+import { UserAlbums } from "../../context/UserAlbumsProvider";
 import GalleryList from "./GalleryList";
 
 export default function Albums() {

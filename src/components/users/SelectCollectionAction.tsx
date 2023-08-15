@@ -1,5 +1,5 @@
 import { Link } from "@mui/material";
-import { CONSTANTS } from "../constants/Constants";
+import { CONSTANTS } from "../../constants/Constants";
 import { useNavigate } from "react-router-dom";
 
 export default function SelectCollectionAction({ id }: { id: number }) {
