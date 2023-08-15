@@ -2,11 +2,11 @@
 
 .list_item {
   &_personal_info {
-    flex: 1 0 90%;
+    flex: 1 0 85%;
   }
 
   &_actions {
-    flex: 1 0 10%;
+    flex: 1 0 15%;
     display: flex;
     justify-content: space-around;
     align-items: center;
