@@ -4,6 +4,7 @@ import BackButton from "../common/BackButton";
 import { CONSTANTS } from "../../constants/Constants";
 import { UserAlbums } from "../../context/UserAlbumsProvider";
 import GalleryList from "./GalleryList";
+import PageHeading from "../common/PageHeading";
 
 export default function Albums() {
   const { id } = useParams();
@@ -16,7 +17,8 @@ export default function Albums() {
   return (
     <>
       <BackButton />
-      <GalleryList title={CONSTANTS.titles.albums} state={state} />
+      <PageHeading title={CONSTANTS.titles.albums} />
+      <GalleryList state={state} />
     </>
   );
 }

@@ -2,6 +2,7 @@ export const CONSTANTS = {
   actions: {
     goTo: "Go to",
     back: "Back",
+    search: "Search",
   },
   titles: {
     users: "Users",
@@ -13,5 +14,8 @@ export const CONSTANTS = {
     data: [],
     loading: false,
     error: null,
+  },
+  placeholders: {
+    search: "Search by username",
   },
 };

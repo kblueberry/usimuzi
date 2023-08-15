@@ -7,7 +7,7 @@ import { Post } from "../../dto/Post";
 import UserPost from "../posts/Post";
 import { ListProps } from "../../dto/ListProps";
 
-export default function ItemsList({ title, state }: ListProps<User | Post>) {
+export default function ItemsList({ state }: ListProps<User | Post>) {
   if (state.loading) {
     return <LoadingIndicator />;
   }
@@ -29,9 +29,9 @@ export default function ItemsList({ title, state }: ListProps<User | Post>) {
 
   return (
     <div className="flex_column_container">
-      <ListSubheader>
-        <h1 className="heading_h1">{title}</h1>
-      </ListSubheader>
+      {/*<ListSubheader>*/}
+      {/*  <h1 className="heading_h1">{title}</h1>*/}
+      {/*</ListSubheader>*/}
       <List>
         {state.data.map((dataItem: User | Post) => (
           <div key={dataItem.id}>
