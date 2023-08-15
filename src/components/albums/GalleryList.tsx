@@ -22,7 +22,7 @@ export default function GalleryList({ title, state }: ListProps<Album>) {
       <Grid container spacing={2}>
         {state.data.map((dataItem) => (
           <Grid item xs={4}>
-            <UserAlbum title={dataItem.title} />
+            <UserAlbum album={dataItem} />
           </Grid>
         ))}
       </Grid>

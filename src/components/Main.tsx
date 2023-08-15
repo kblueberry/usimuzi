@@ -36,6 +36,14 @@ export default function Main() {
             </UserAlbumsProvider>
           }
         ></Route>
+        <Route
+          path="users/:id/albums/:albumId"
+          element={
+            <div>
+              <p>Here are photos</p>
+            </div>
+          }
+        ></Route>
       </Routes>
     </BrowserRouter>
   );
