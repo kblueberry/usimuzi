@@ -1,9 +1,8 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
 import { DataFetchState } from "../dto/DataFetchState";
-import { Post } from "../dto/Post";
 import { CONSTANTS } from "../constants/Constants";
-import { getUserAlbums, getUserPosts } from "../constants/Api";
 import { Album } from "../dto/Album";
+import { getUserAlbums } from "../helpers/Api";
 
 export const UserAlbums = createContext<{
   state: DataFetchState<Album>;

@@ -2,7 +2,7 @@ import { createContext, ReactNode, useEffect, useState } from "react";
 import { DataFetchState } from "../dto/DataFetchState";
 import { Post } from "../dto/Post";
 import { CONSTANTS } from "../constants/Constants";
-import { getUserPosts } from "../constants/Api";
+import { getUserPosts } from "../helpers/Api";
 
 export const UserPosts = createContext<{
   state: DataFetchState<Post>;
