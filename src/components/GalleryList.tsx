@@ -1,14 +1,19 @@
 import { Grid, ListSubheader } from "@mui/material";
 import UserAlbum from "./UserAlbum";
-import { DataFetchState } from "../dto/DataFetchState";
 import { Album } from "../dto/Album";
+import { ListProps } from "../dto/ListProps";
+import LoadingIndicator from "./LoadingIndicator";
+import ErrorSnackBar from "./ErrorSnackBar";
 
-interface CustomListProps {
-  title: string;
-  state: DataFetchState<Album>;
-}
+export default function GalleryList({ title, state }: ListProps<Album>) {
+  if (state.loading) {
+    return <LoadingIndicator />;
+  }
 
-export default function GalleryList({ title, state }: CustomListProps) {
+  if (!!state.error) {
+    return <ErrorSnackBar error={state.error} />;
+  }
+
   return (
     <>
       <ListSubheader>
