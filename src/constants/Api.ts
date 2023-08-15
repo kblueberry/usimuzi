@@ -9,3 +9,7 @@ export const getUsers = () => {
 export const getUserPosts = (id: number) => {
   return axios.get(`${API_URL}users/${id}/posts`);
 };
+
+export const getUserAlbums = (id: number) => {
+  return axios.get(`${API_URL}users/${id}/albums`);
+};

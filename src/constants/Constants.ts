@@ -1,7 +1,7 @@
 export const CONSTANTS = {
   actions: {
     goTo: "Go to",
-    backToUsers: "Back to users list",
+    back: "Back",
   },
   titles: {
     users: "Users",
